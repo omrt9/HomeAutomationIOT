@@ -1,0 +1,15 @@
+<?php
+exec("gpio mode 0 out");
+
+if(isset($_GET['led1']))
+{
+    if($_GET['led1'] == 1)
+    {
+        exec("gpio write 0 1");
+    }
+    else
+    {
+        exec("gpio write 0 0");
+    }
+}
+?>
